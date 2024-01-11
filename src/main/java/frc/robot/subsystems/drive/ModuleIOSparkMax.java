@@ -55,28 +55,32 @@ public class ModuleIOSparkMax implements ModuleIO {
 
   public ModuleIOSparkMax(int index) {
     switch (index) {
+        // Front left module
       case 0:
-        driveSparkMax = new CANSparkMax(1, MotorType.kBrushless);
-        turnSparkMax = new CANSparkMax(2, MotorType.kBrushless);
-        turnAbsoluteEncoder = new AnalogInput(0);
+        driveSparkMax = new CANSparkMax(22, MotorType.kBrushless);
+        turnSparkMax = new CANSparkMax(21, MotorType.kBrushless);
+        turnAbsoluteEncoder = new AnalogInput(23);
         absoluteEncoderOffset = new Rotation2d(0.0); // MUST BE CALIBRATED
         break;
+        // Front right module
       case 1:
-        driveSparkMax = new CANSparkMax(3, MotorType.kBrushless);
-        turnSparkMax = new CANSparkMax(4, MotorType.kBrushless);
-        turnAbsoluteEncoder = new AnalogInput(1);
+        driveSparkMax = new CANSparkMax(32, MotorType.kBrushless);
+        turnSparkMax = new CANSparkMax(31, MotorType.kBrushless);
+        turnAbsoluteEncoder = new AnalogInput(33);
         absoluteEncoderOffset = new Rotation2d(0.0); // MUST BE CALIBRATED
         break;
+        // Back left module
       case 2:
-        driveSparkMax = new CANSparkMax(5, MotorType.kBrushless);
-        turnSparkMax = new CANSparkMax(6, MotorType.kBrushless);
-        turnAbsoluteEncoder = new AnalogInput(2);
+        driveSparkMax = new CANSparkMax(2, MotorType.kBrushless);
+        turnSparkMax = new CANSparkMax(1, MotorType.kBrushless);
+        turnAbsoluteEncoder = new AnalogInput(3);
         absoluteEncoderOffset = new Rotation2d(0.0); // MUST BE CALIBRATED
         break;
+        // Back right module
       case 3:
-        driveSparkMax = new CANSparkMax(7, MotorType.kBrushless);
-        turnSparkMax = new CANSparkMax(8, MotorType.kBrushless);
-        turnAbsoluteEncoder = new AnalogInput(3);
+        driveSparkMax = new CANSparkMax(12, MotorType.kBrushless);
+        turnSparkMax = new CANSparkMax(11, MotorType.kBrushless);
+        turnAbsoluteEncoder = new AnalogInput(13);
         absoluteEncoderOffset = new Rotation2d(0.0); // MUST BE CALIBRATED
         break;
       default:
